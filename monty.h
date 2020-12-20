@@ -70,11 +70,13 @@ typedef struct error
 	void (*error_type)(void);
 } error_t;
 
+void handle_error(int code);
 void malloc_fail(void);
 void monty_usage(void);
 void push_use(void);
 void unknown_command(void);
 void file_perm(void);
+void pint_error(void);
 
 
 int treat_monty(char *filename);
@@ -90,6 +92,5 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
 char *_memcpy(char *dest, char *src, unsigned int n);
 void *fill_an_array(void *a, int el, unsigned int len);
 int _isdigit(char *str);
-void handle_error(int code);
 
 #endif

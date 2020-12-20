@@ -11,6 +11,7 @@ void handle_error(int code)
 		{3, file_perm},
 		{4, unknown_command},
 		{5, push_use},
+		{6, pint_error},
 		{0, NULL}
 	};
 	int i = 0;
