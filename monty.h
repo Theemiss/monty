@@ -81,6 +81,7 @@ void file_perm(void);
 void pint_error(void);
 void pop_error(void);
 void swap_error(void);
+void add_error(void);
 
 /****** Engine *****/
 
@@ -95,7 +96,7 @@ void pall_monty(stack_t **stack, unsigned int line_number);
 void pint_monty(stack_t **stack, unsigned int line_number);
 void pop_monty(stack_t **stack, unsigned int line_number);
 void swap_monty(stack_t **stack, unsigned int line_number);
-
+void add_monty(stack_t **stack, unsigned int line_number);
 /****** Helpers *********/
 
 void free_info(void);
@@ -105,5 +106,6 @@ char *_memcpy(char *dest, char *src, unsigned int n);
 void *fill_an_array(void *a, int el, unsigned int len);
 int _isdigit(char *str);
 int dlistint_len(stack_t *stack);
+int delete_dnodeint_at_index(stack_t **head, int index);
 
 #endif

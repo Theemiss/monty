@@ -14,6 +14,7 @@ void handle_error(int code)
 		{6, pint_error},
 		{7, pop_error},
 		{8, swap_error},
+		{9, add_error},
 		{0, NULL}
 	};
 	int i = 0;
