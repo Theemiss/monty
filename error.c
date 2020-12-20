@@ -15,6 +15,7 @@ void handle_error(int code)
 		{7, pop_error},
 		{8, swap_error},
 		{9, add_error},
+		{10, sub_error},
 		{0, NULL}
 	};
 	int i = 0;

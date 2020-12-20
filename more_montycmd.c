@@ -58,3 +58,25 @@ void nop_monty(stack_t **stack, unsigned int line_number)
 	(void)stack;
 	(void)line_number;
 }
+/**
+ * sub_monty - subtracts the top element of the stack
+ * @stack: Pointer To The head
+ * @line_number: The Line Number
+ * Return:Void
+ */
+void sub_monty(stack_t **stack, unsigned int line_number)
+{
+	stack_t *head = *stack;
+	int check, sum = 0;
+	stack_t *top1, *top2;
+	(void)line_number;
+
+	check = dlistint_len(head);
+	if (check < 2)
+		handle_error(10);
+	top1 = head;
+	top2 = head->next;
+	sum = top2->n - top1->n;
+	(*stack)->n = sum;
+	delete_dnodeint_at_index(stack, 1);
+}

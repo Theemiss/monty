@@ -82,6 +82,8 @@ void pint_error(void);
 void pop_error(void);
 void swap_error(void);
 void add_error(void);
+void sub_error(void);
+
 
 /****** Engine *****/
 
@@ -98,6 +100,8 @@ void pop_monty(stack_t **stack, unsigned int line_number);
 void swap_monty(stack_t **stack, unsigned int line_number);
 void add_monty(stack_t **stack, unsigned int line_number);
 void nop_monty(stack_t **stack, unsigned int line_number);
+void sub_monty(stack_t **stack, unsigned int line_number);
+
 /****** Helpers *********/
 
 void free_info(void);

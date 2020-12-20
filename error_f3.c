@@ -7,3 +7,11 @@ void add_error(void)
 	fprintf(stderr, "L%d: can't add, stack too short\n", info.l_number);
 	free_info();
 }
+/**
+ * sub_error - error when sub command and stack too short
+ */
+void sub_error(void)
+{
+	fprintf(stderr, "L%d: can't sub, stack too short\n", info.l_number);
+	free_info();
+}
