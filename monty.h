@@ -84,8 +84,9 @@ void swap_error(void);
 void add_error(void);
 void sub_error(void);
 void div_error(void);
-void _div(void);
+void _zero(void);
 void mul_error(void);
+void mod_error(void);
 
 
 
@@ -107,6 +108,7 @@ void nop_monty(stack_t **stack, unsigned int line_number);
 void sub_monty(stack_t **stack, unsigned int line_number);
 void div_monty(stack_t **stack, unsigned int line_number);
 void mul_monty(stack_t **stack, unsigned int line_number);
+void mod_monty(stack_t **stack, unsigned int line_number);
 
 /****** Helpers *********/
 
