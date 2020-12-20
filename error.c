@@ -16,6 +16,8 @@ void handle_error(int code)
 		{8, swap_error},
 		{9, add_error},
 		{10, sub_error},
+		{11, div_error},
+		{12, _div},
 		{0, NULL}
 	};
 	int i = 0;
@@ -37,13 +39,6 @@ void malloc_fail(void)
 {
 	fprintf(stderr, "Error: malloc failed\n");
 	free_info();
-}
-/**
- * monty_usage - error for interpteur usage
- */
-void monty_usage(void)
-{
-	fprintf(stderr, "USAGE: monty file\n");
 }
 /**
  * file_perm - error for no permession or can t open file

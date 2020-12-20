@@ -80,7 +80,7 @@ int excute_monty(stack_t **stack)
 		{"add", add_monty},
 		{"nop", nop_monty},
 		{"sub", sub_monty},
-		{"div", NULL},
+		{"div", div_monty},
 		{"mul", NULL},
 		{"mod", NULL},
 		{NULL, NULL}
