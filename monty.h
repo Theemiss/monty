@@ -87,6 +87,9 @@ void div_error(void);
 void _zero(void);
 void mul_error(void);
 void mod_error(void);
+void pchar_error(void);
+void pchar_error_2(void);
+
 
 
 
@@ -109,6 +112,7 @@ void sub_monty(stack_t **stack, unsigned int line_number);
 void div_monty(stack_t **stack, unsigned int line_number);
 void mul_monty(stack_t **stack, unsigned int line_number);
 void mod_monty(stack_t **stack, unsigned int line_number);
+void pchar_monty(stack_t **stack, unsigned int line_number);
 
 /****** Helpers *********/
 
@@ -120,5 +124,6 @@ void *fill_an_array(void *a, int el, unsigned int len);
 int _isdigit(char *str);
 int dlistint_len(stack_t *stack);
 int delete_dnodeint_at_index(stack_t **head, int index);
+
 
 #endif

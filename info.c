@@ -84,6 +84,7 @@ int excute_monty(stack_t **stack)
 		{"mul", mul_monty},
 		{"mod", mod_monty},
 		{"#", nop_monty},
+		{"pchar", pchar_monty},
 		{NULL, NULL}
 	};
 	int i = 0;
