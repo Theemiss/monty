@@ -97,6 +97,7 @@ void pint_monty(stack_t **stack, unsigned int line_number);
 void pop_monty(stack_t **stack, unsigned int line_number);
 void swap_monty(stack_t **stack, unsigned int line_number);
 void add_monty(stack_t **stack, unsigned int line_number);
+void nop_monty(stack_t **stack, unsigned int line_number);
 /****** Helpers *********/
 
 void free_info(void);

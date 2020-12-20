@@ -5,12 +5,12 @@
  * @line_number: The Line Number
  * Return:Void
  */
-void swap_monty(stack_t **stack,
-	unsigned int line_number __attribute__((unused)))
+void swap_monty(stack_t **stack, unsigned int line_number)
 {
 	stack_t *head = *stack;
 	int check;
 	stack_t *top, *under_top;
+	(void)line_number;
 
 	check = dlistint_len(head);
 	if (check < 2)
@@ -31,12 +31,12 @@ void swap_monty(stack_t **stack,
  * @line_number: The Line Number
  * Return:Void
  */
-void add_monty(stack_t **stack,
-	unsigned int line_number __attribute__((unused)))
+void add_monty(stack_t **stack, unsigned int line_number)
 {
 	stack_t *head = *stack;
 	int check, sum = 0;
 	stack_t *top1, *top2;
+	(void)line_number;
 
 	check = dlistint_len(head);
 	if (check < 2)
@@ -46,4 +46,15 @@ void add_monty(stack_t **stack,
 	sum = top1->n + top2->n;
 	(*stack)->n = sum;
 	delete_dnodeint_at_index(stack, 1);
+}
+/**
+ * nop_monty - do nothing
+ * @stack: Pointer To The head
+ * @line_number: The Line Number
+ * Return:Void
+ */
+void nop_monty(stack_t **stack, unsigned int line_number)
+{
+	(void)stack;
+	(void)line_number;
 }

@@ -5,10 +5,10 @@
  * @line_number: The Line Number
  * Return:Void
  */
-void push_monty(stack_t **stack,
-	unsigned int line_number __attribute__((unused)))
+void push_monty(stack_t **stack, unsigned int line_number)
 {
 	stack_t *n_node;
+	(void)line_number;
 
 	n_node = malloc(sizeof(stack_t));
 	if (n_node == NULL)
@@ -28,11 +28,11 @@ void push_monty(stack_t **stack,
  * @line_number: Line Number
  * Return: Void
  */
-void pall_monty(stack_t **stack,
-	unsigned int line_number __attribute__((unused)))
+void pall_monty(stack_t **stack, unsigned int line_number)
 {
 	int i;
 	stack_t *node;
+	(void)line_number;
 
 	node = *stack;
 	for (i = 0; node; i++)
@@ -46,9 +46,10 @@ void pall_monty(stack_t **stack,
  * @stack: Pointer To The Head
  * @line_number: Line Number
  */
-void pint_monty(stack_t **stack,
-	unsigned int line_number __attribute__((unused)))
+void pint_monty(stack_t **stack, unsigned int line_number)
 {
+	(void)line_number;
+
 	if (*stack == NULL)
 		handle_error(6);
 	fprintf(stdout, "%d\n", (*stack)->n);
@@ -58,10 +59,10 @@ void pint_monty(stack_t **stack,
  * @stack:Pointer To The Head
  * @line_number: Line Number
  */
-void pop_monty(stack_t **stack,
-	unsigned int line_number __attribute__((unused)))
+void pop_monty(stack_t **stack, unsigned int line_number)
 {
 	stack_t *start = *stack;
+	(void)line_number;
 
 	if (*stack == NULL)
 		handle_error(7);
