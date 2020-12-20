@@ -18,6 +18,7 @@ void handle_error(int code)
 		{10, sub_error},
 		{11, div_error},
 		{12, _div},
+		{13, mul_error},
 		{0, NULL}
 	};
 	int i = 0;
