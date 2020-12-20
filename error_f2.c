@@ -23,3 +23,11 @@ void pop_error(void)
 	fprintf(stderr, "L%d: can't pop an empty stack\n", info.l_number);
 	free_info();
 }
+/**
+ * swap_error - error when the stack len less than 2
+ */
+void swap_error(void)
+{
+	fprintf(stderr, "L%d: can't swap, stack too short\n", info.l_number);
+	free_info();
+}

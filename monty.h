@@ -70,6 +70,8 @@ typedef struct error
 	void (*error_type)(void);
 } error_t;
 
+/********* Error-Handler**********/
+
 void handle_error(int code);
 void malloc_fail(void);
 void monty_usage(void);
@@ -78,15 +80,23 @@ void unknown_command(void);
 void file_perm(void);
 void pint_error(void);
 void pop_error(void);
+void swap_error(void);
 
+/****** Engine *****/
 
 int treat_monty(char *filename);
 int split(void);
 int excute_monty(stack_t **stack);
+
+/***** Monty-Command******/
+
 void push_monty(stack_t **stack, unsigned int line_number);
 void pall_monty(stack_t **stack, unsigned int line_number);
 void pint_monty(stack_t **stack, unsigned int line_number);
 void pop_monty(stack_t **stack, unsigned int line_number);
+void swap_monty(stack_t **stack, unsigned int line_number);
+
+/****** Helpers *********/
 
 void free_info(void);
 void free_list(stack_t *stack);
@@ -94,5 +104,6 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
 char *_memcpy(char *dest, char *src, unsigned int n);
 void *fill_an_array(void *a, int el, unsigned int len);
 int _isdigit(char *str);
+int dlistint_len(stack_t *stack);
 
 #endif

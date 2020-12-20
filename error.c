@@ -13,6 +13,7 @@ void handle_error(int code)
 		{5, push_use},
 		{6, pint_error},
 		{7, pop_error},
+		{8, swap_error},
 		{0, NULL}
 	};
 	int i = 0;
