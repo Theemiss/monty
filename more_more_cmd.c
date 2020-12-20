@@ -19,7 +19,7 @@ void div_monty(stack_t **stack, unsigned int line_number)
 	if (top2->n == 0)
 		handle_error(12);
 
-	sum = top1->n / top2->n;
+	sum = top2->n / top1->n;
 	(*stack)->n = sum;
 	delete_dnodeint_at_index(stack, 1);
 }
