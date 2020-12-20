@@ -16,7 +16,7 @@ void div_monty(stack_t **stack, unsigned int line_number)
 		handle_error(11);
 	top1 = head;
 	top2 = head->next;
-	if (top2->n == 0)
+	if (top1->n == 0)
 		handle_error(12);
 
 	sum = top2->n / top1->n;
