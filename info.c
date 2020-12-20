@@ -75,7 +75,7 @@ int excute_monty(stack_t **stack)
 		{"push", push_monty},
 		{"pall", pall_monty},
 		{"pint", pint_monty},
-		{"pop", NULL},
+		{"pop", pop_monty},
 		{"swap", NULL},
 		{"nop", NULL},
 		{"add", NULL},

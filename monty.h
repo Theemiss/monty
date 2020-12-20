@@ -77,6 +77,7 @@ void push_use(void);
 void unknown_command(void);
 void file_perm(void);
 void pint_error(void);
+void pop_error(void);
 
 
 int treat_monty(char *filename);
@@ -85,6 +86,7 @@ int excute_monty(stack_t **stack);
 void push_monty(stack_t **stack, unsigned int line_number);
 void pall_monty(stack_t **stack, unsigned int line_number);
 void pint_monty(stack_t **stack, unsigned int line_number);
+void pop_monty(stack_t **stack, unsigned int line_number);
 
 void free_info(void);
 void free_list(stack_t *stack);

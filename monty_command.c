@@ -53,3 +53,21 @@ void pint_monty(stack_t **stack,
 		handle_error(6);
 	fprintf(stdout, "%d\n", (*stack)->n);
 }
+/**
+ * pop_monty -  removes the top element of the stack
+ * @stack:Pointer To The Head
+ * @line_number: Line Number
+ */
+void pop_monty(stack_t **stack,
+	unsigned int line_number __attribute__((unused)))
+{
+	stack_t *start = *stack;
+
+	if (*stack == NULL)
+		handle_error(7);
+	start = start->next;
+	free(*stack);
+	*stack = start;
+	if (start != NULL)
+		start->prev = NULL;
+}
