@@ -11,6 +11,9 @@
 #include <ctype.h>
 
 #define DELIMITER " \n\t\a"
+#define LIFO 1
+#define FIFO 0
+
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
@@ -48,6 +51,7 @@ typedef struct instruction_s
  * @l_number: Line Number
  * @fp: File Descriptor
  * @fn: File Name
+ * @type: FIFO LIFO
  * Description: Information About The Commands In The Monty File
  */
 typedef struct info_s
@@ -57,6 +61,7 @@ typedef struct info_s
 	char *fn;
 	int l_number;
 	FILE *fp;
+	int type;
 } info_t;
 extern info_t info;
 /**
@@ -116,6 +121,8 @@ void pchar_monty(stack_t **stack, unsigned int line_number);
 void pstr_monty(stack_t **stack, unsigned int line_number);
 void rotr_monty(stack_t **stack, unsigned int line_number);
 void rotl_monty(stack_t **stack, unsigned int line_number);
+void _queue(stack_t **stack, unsigned int line_number);
+void _stack(stack_t **stack, unsigned int line_number);
 
 
 /****** Helpers *********/
@@ -128,6 +135,10 @@ void *fill_an_array(void *a, int el, unsigned int len);
 int _isdigit(char *str);
 int dlistint_len(stack_t *stack);
 int delete_dnodeint_at_index(stack_t **head, int index);
+void add_node_fifo(stack_t **stack, stack_t *new_node);
+void add_node_lifo(stack_t **stack, stack_t *new_node);
+
+
 
 
 #endif

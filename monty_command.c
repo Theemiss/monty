@@ -15,12 +15,13 @@ void push_monty(stack_t **stack, unsigned int line_number)
 		handle_error(1);
 	if (_isdigit(info.arg[1]) > 0)
 		handle_error(5);
-	n_node->prev = NULL;
-	n_node->next = *stack;
 	n_node->n = atoi(info.arg[1]);
-	if (*stack != NULL)
-		(*stack)->prev = n_node;
-	*stack = n_node;
+	if (info.type == LIFO)
+	{
+		add_node_lifo(stack, n_node);
+	}
+	else
+		add_node_fifo(stack, n_node);
 }
 /**
  * pall_monty - Prints All The Values On The Stack

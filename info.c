@@ -88,6 +88,8 @@ int excute_monty(stack_t **stack)
 		{"pstr", pstr_monty},
 		{"rotl", rotl_monty},
 		{"rotr", rotr_monty},
+		{"stack", _stack},
+		{"queue", _queue},
 		{NULL, NULL}
 	};
 	int i = 0;

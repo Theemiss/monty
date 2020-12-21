@@ -7,6 +7,7 @@
  */
 int main(int argc, char **argv)
 {
+	info.type = LIFO;
 	if (argc != 2)
 		handle_error(2);
 	else
