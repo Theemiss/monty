@@ -9,6 +9,7 @@ void pchar_monty(stack_t **stack, unsigned int line_number)
 {
 	stack_t *head = *stack;
 	(void)line_number;
+
 	if (*stack == NULL)
 		pchar_error();
 	if (head->n >= 65 && head->n <= 90)
