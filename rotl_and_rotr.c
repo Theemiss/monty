@@ -7,17 +7,19 @@
  */
 void rotl_monty(stack_t **stack, unsigned int line_number)
 {
-	stack_t *head = *stack;
-	int temp = 0;
+	int tmp;
+	stack_t *copy;
+
 	(void)line_number;
 
-	temp = head->n;
-	while (head->next != NULL)
+	if (stack && *stack)
 	{
-		head = head->next;
-		head->prev->n = head->n;
+		tmp = (*stack)->n;
+
+		for (copy = *stack; copy->next; copy = copy->next)
+			copy->n = copy->next->n;
+		copy->n = tmp;
 	}
-	head->n = temp;
 }
 /**
  * rotr_monty - rotates the stack to the bottom.
@@ -27,17 +29,23 @@ void rotl_monty(stack_t **stack, unsigned int line_number)
  */
 void rotr_monty(stack_t **stack, unsigned int line_number)
 {
-	stack_t *head = *stack;
-	int temp = 0;
+	int next, current;
+	stack_t *copy;
+
 	(void)line_number;
 
-	while (head->next != NULL)
-		head = head->next;
-	temp = head->n;
-	while (head->prev != NULL)
+	if (stack && *stack)
 	{
-		head = head->prev;
-		head->next->n = head->n;
+		copy = *stack;
+		next = copy->n;
+
+		while (copy->next)
+		{
+			current = next;
+			next = copy->next->n;
+			copy->next->n = current;
+			copy = copy->next;
+		}
+		(*stack)->n = next;
 	}
-	head->n = temp;
 }
