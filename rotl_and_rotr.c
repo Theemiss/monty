@@ -7,8 +7,8 @@
  */
 void rotl_monty(stack_t **stack, unsigned int line_number)
 {
-	stack_t *head = stack;
-	int temp = 0,len;
+	stack_t *head = *stack;
+	int temp = 0;
 	(void)line_number;
 
 	temp = head->n;
