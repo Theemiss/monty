@@ -20,12 +20,11 @@ void pstr_monty(stack_t **stack, unsigned int line_number)
 			putchar(node->n);
 		else if (node->n >= 97 && node->n <= 122)
 			putchar(node->n);
+		else if (node->n == 0)
+			node = node->next;
 		else
-		{
-			putchar('\n');
-			free_info();
-			exit(EXIT_FAILURE);
-		}
-	node = node->next;
+			break;
+		node = node->next;
 	}
+	putchar('\n');
 }
