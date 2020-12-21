@@ -113,6 +113,7 @@ void div_monty(stack_t **stack, unsigned int line_number);
 void mul_monty(stack_t **stack, unsigned int line_number);
 void mod_monty(stack_t **stack, unsigned int line_number);
 void pchar_monty(stack_t **stack, unsigned int line_number);
+void pstr_monty(stack_t **stack, unsigned int line_number);
 
 /****** Helpers *********/
 
