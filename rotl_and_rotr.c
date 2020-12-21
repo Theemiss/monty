@@ -28,24 +28,16 @@ void rotl_monty(stack_t **stack, unsigned int line_number)
 void rotr_monty(stack_t **stack, unsigned int line_number)
 {
 	stack_t *head = *stack;
-	int temp = 0, len;
+	int temp = 0;
 	(void)line_number;
 
-	len = dlistint_len(head);
-	if (len < 2)
+	while (head->next != NULL)
+		head = head->next;
+	temp = head->n;
+	while (head->prev != NULL)
 	{
-		exit(EXIT_SUCCESS);
+		head = head->prev;
+		head->next->n = head->n;
 	}
-	else
-	{
-		while (head->next != NULL)
-			head = head->next;
-		temp = head->n;
-		while (head->prev != NULL)
-		{
-			head = head->prev;
-			head->next->n = head->n;
-		}
-		head->n = temp;
-	}
+	head->n = temp;
 }
