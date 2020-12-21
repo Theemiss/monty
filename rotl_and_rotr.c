@@ -8,9 +8,15 @@
 void rotl_monty(stack_t **stack, unsigned int line_number)
 {
 	stack_t *head = *stack;
-	int temp = 0;
+	int temp = 0, len;
 	(void)line_number;
 
+	len = dlistint_len(head);
+	if (len < 2)
+	{
+		free_info();
+		exit(EXIT_SUCCESS);
+	}
 	temp = head->n;
 	while (head->next != NULL)
 	{
